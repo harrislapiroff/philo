@@ -16,7 +16,7 @@
 			EmbedWidgets = $('.embed-widget');
 			EmbedWidgets.prepend($('<div class="embed-toolbar" />'));
 			EmbedBars = $('.embed-toolbar');
-			EmbedBars.append('<select class="embed-select"></select> <a href="#" class="related-lookup embed-button"><img src="' + LoupeImageUrl + '" width="16" height="16" alt="Lookup"></a>');
+			EmbedBars.append('<strong>Embed Media:</strong> <select class="embed-select"></select> <a href="#" class="related-lookup embed-button"><img src="' + LoupeImageUrl + '" width="16" height="16" alt="Lookup"></a>');
 			EmbedButtons = $('.embed-button');
 			EmbedSelects = $('.embed-select');
 			
