@@ -4,8 +4,8 @@
 {{ inline_admin_formset.formset.management_form }}
 {% comment %}Don't render the formset at all if there aren't any forms.{% endcomment %}
 {% if inline_admin_formset.formset.forms %}
-	<fieldset class="module{% if inline_admin_formset.opts.classes %} {{ inline_admin_formset.opts.classes|join:" " }}{% endif %}">
-		<h2{% if "collapse" in inline_admin_formset.opts.classes %} class="collapse-handler"{% endif %}>{{ inline_admin_formset.opts.verbose_name_plural|capfirst }}</h2>
+	<fieldset class="grp-module{% if inline_admin_formset.opts.classes %} {{ inline_admin_formset.opts.classes|join:" " }}{% endif %}">
+		<h2{% if "collapse" in inline_admin_formset.opts.classes %} class="grp-collapse-handler"{% endif %}>{{ inline_admin_formset.opts.verbose_name_plural|capfirst }}</h2>
 		{{ inline_admin_formset.formset.non_form_errors }}
 		{% for inline_admin_form in inline_admin_formset %}
 			{% if inline_admin_form.has_auto_field %}{{ inline_admin_form.pk_field.field }}{% endif %}
@@ -20,14 +20,14 @@
 			{% endfor %}{% endspaceless %}
 		{% endfor %}
 		{% for form in inline_admin_formset.formset.forms %}
-			<div class="row cells-{{ form.fields|length }} cells{% if form.errors %} errors{% endif %}{% for field in form %} {{ field.field.name }}{% endfor %}">
+			<div class="grp-row grp-cells-{{ form.fields|length }}{% if form.errors %} errors{% endif %}{% for field in form %} {{ field.field.name }}{% endfor %}">
 				{{ form.non_field_errors }}
-				<div>
+				<div class="l-2c-fluid l-d-4">
 				{% for field in form %}
 					{% if not field.is_hidden %}
 					{% comment %}This will be true for one field: the content/content reference{% endcomment %}
-					<div class="column span-4"><label class='required' for="{{ form.content.auto_id }}{{ form.content_id.auto_id }}">{{ form.verbose_name|capfirst }}:</label></div>
-					<div class="column span-flexible">
+					<div class="grp-column c-1"><label for="{{ form.content.auto_id }}{{ form.content_id.auto_id }}">{{ form.verbose_name|capfirst }}:</label></div>
+					<div class="grp-column c-2">
 						{{ field }}
 						{{ field.errors }}
 						{% if field.field.help_text %}
