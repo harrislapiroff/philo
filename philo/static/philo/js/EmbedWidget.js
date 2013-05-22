@@ -9,13 +9,14 @@
 				EmbedWidgets = widget.EmbedWidgets,
 				EmbedBars = widget.EmbedBars,
 				EmbedButtons = widget.EmbedButtons,
-				EmbedSelects = widget.EmbedSelects;
+				EmbedSelects = widget.EmbedSelects,
+				LoupeImageUrl = 'grappelli' in window ? "/grapelli/img/admin/selector-search.gif" : __admin_media_prefix__ + "img/selector-search.gif";
 
 			EmbedFields.wrap($('<div class="embed-widget" />'));
 			EmbedWidgets = $('.embed-widget');
 			EmbedWidgets.prepend($('<div class="embed-toolbar" />'));
 			EmbedBars = $('.embed-toolbar');
-			EmbedBars.append('<select class="embed-select"></select><button class="embed-button">Embed</button>');
+			EmbedBars.append('<select class="embed-select"></select> <a href="#" class="related-lookup embed-button"><img src="' + LoupeImageUrl + '" width="16" height="16" alt="Lookup"></a>');
 			EmbedButtons = $('.embed-button');
 			EmbedSelects = $('.embed-select');
 			
@@ -85,7 +86,7 @@
 				optgroup_el, group;
 				
 			// append a title
-			$this.append('<option value="">Media Types</option>');
+			$this.append('<option value="">Select a Media Type</option>');
 			
 			// for each group
 			for (name in optgroups){
