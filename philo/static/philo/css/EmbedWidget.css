@@ -10,27 +10,7 @@
 	background-color:#EEE;
 }
 .embed-widget textarea{
-	margin-top:0;
-}
-.embed-widget button, .embed-widget select{
-	vertical-align:middle;
-	margin-right:3px;
-}
-.embed-toolbar button{
-	background:#FFF;
-	border:1px solid #CCC;
-	border-radius:3px;
-	-webkit-border-radius:3px;
-	-moz-border-radius:3px;
-	color:#666;
-}
-.embed-toolbar button:hover{
-	color:#444;
-}
-.embed-toolbar button:active{
-	color:#FFF;
-	background:#666;
-	border-color:#666;
+	margin-top: 0;
 }
 
 .grappelli .embed-widget{
@@ -44,7 +24,7 @@
 	margin:0 -3px;
 }
 .grappelli .embed-toolbar{
-	padding:0;
+	padding:0 5px;
 	padding-bottom:3px;
 	background:none;
 	border:none;

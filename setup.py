@@ -36,7 +36,7 @@ setup(
 	],
 	extras_require = {
 		'docs': ["sphinx>=1.0"],
-		'grappelli': ['django-grappelli>=2.3'],
+		'grappelli': ['django-grappelli>=2.4'],
 		'migrations': ['south>=0.7.2'],
 		'waldo-recaptcha': ['recaptcha-django'],
 		'sobol-eventlet': ['eventlet'],
