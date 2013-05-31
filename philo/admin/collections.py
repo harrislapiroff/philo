@@ -12,6 +12,9 @@ class CollectionMemberInline(admin.TabularInline):
 	allow_add = True
 	fields = ('member_content_type', 'member_object_id', 'index')
 	sortable_field_name = 'index'
+	related_lookup_fields = {
+		'generic': (('member_content_type', 'member_object_id'),),
+	}
 
 
 class CollectionAdmin(admin.ModelAdmin):
